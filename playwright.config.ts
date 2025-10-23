@@ -15,11 +15,12 @@ export default defineConfig({
   /* Limit workers on CI to avoid resource contention */
   workers: process.env.CI ? 1 : undefined,
 
-  /* ✅ Reporters: generate HTML + JUnit for TeamCity */
-  reporter: [
-    ['html',  { open: 'never', outputFolder: 'playwright-report' }],
-    ['junit', { outputFile: 'reports/junit.xml' }],
-  ],
+ // ✅ put this inside export default defineConfig({...})
+reporter: [
+  ['html',  { open: 'never', outputFolder: 'playwright-report' }],
+  ['junit', { outputFile: 'reports/junit.xml' }],
+],
+
 
   /* Default options for all tests */
   use: {
