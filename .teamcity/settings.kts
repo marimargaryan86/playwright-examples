@@ -57,10 +57,6 @@ object Build : BuildType({
 object Build1 : BuildType({
     name = "Build (1)"
 
-    vcs {
-        root(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
-    }
-
     steps {
         script {
             name = "sleep"
