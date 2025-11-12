@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -28,7 +29,10 @@ version = "2025.07"
 
 project {
 
+    vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
+
     buildType(Build)
+    buildType(Build1)
 }
 
 object Build : BuildType({
@@ -46,5 +50,34 @@ object Build : BuildType({
     features {
         perfmon {
         }
+    }
+})
+
+object Build1 : BuildType({
+    name = "Build (1)"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
+object HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/test_TW-94936.git#refs/heads/main"
+    url = "https://github.com/marimargaryan86/test_TW-94936.git"
+    branch = "refs/heads/main"
+    branchSpec = "refs/heads/*"
+    authMethod = password {
+        userName = "marimargaryan86"
+        password = "credentialsJSON:4ec396fe-4be5-4397-9004-3faf0ae7c9dc"
     }
 })
