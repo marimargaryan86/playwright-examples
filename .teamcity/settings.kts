@@ -59,11 +59,6 @@ object Build1 : BuildType({
 
     vcs {
         root(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
-
-        branchFilter = """
-            +:*
-            -:<default>
-        """.trimIndent()
     }
 
     steps {
