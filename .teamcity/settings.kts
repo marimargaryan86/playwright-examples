@@ -29,6 +29,7 @@ version = "2025.07"
 project {
 
     buildType(Build)
+    buildType(Test)
 }
 
 object Build : BuildType({
@@ -47,4 +48,8 @@ object Build : BuildType({
         perfmon {
         }
     }
+})
+
+object Test : BuildType({
+    name = "test"
 })
