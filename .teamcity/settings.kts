@@ -32,6 +32,7 @@ project {
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936git)
 
     buildType(Build1)
+    buildType(Test)
     buildType(Build)
 }
 
@@ -58,6 +59,14 @@ object Build1 : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+    }
+})
+
+object Test : BuildType({
+    name = "test"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86testTw94936git)
     }
 })
 
