@@ -30,8 +30,10 @@ version = "2025.07"
 project {
 
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936git)
+    vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
 
     buildType(Build)
+    buildType(Build1)
 }
 
 object Build : BuildType({
@@ -52,11 +54,40 @@ object Build : BuildType({
     }
 })
 
+object Build1 : BuildType({
+    name = "Build (1)"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
 object HttpsGithubComMarimargaryan86testTw94936git : GitVcsRoot({
     name = "https://github.com/marimargaryan86/test_TW-94936.git"
     url = "https://github.com/marimargaryan86/test_TW-94936.git"
     branch = "refs/heads/main"
     authMethod = password {
         userName = "marimargaryan86"
+    }
+})
+
+object HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/test_TW-94936.git#refs/heads/main"
+    url = "https://github.com/marimargaryan86/test_TW-94936.git"
+    branch = "refs/heads/main"
+    branchSpec = "refs/heads/*"
+    authMethod = password {
+        userName = "marimargaryan86"
+        password = "credentialsJSON:caff8745-cc20-4798-9a5b-89f1d1a82bd3"
     }
 })
