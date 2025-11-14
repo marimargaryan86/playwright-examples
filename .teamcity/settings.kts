@@ -44,6 +44,14 @@ object Brbr : BuildType({
     vcs {
         root(HttpsGithubComMarimargaryan86brbrGit)
     }
+
+    steps {
+        script {
+            name = "sleep"
+            id = "sleep"
+            scriptContent = "sleep 10"
+        }
+    }
 })
 
 object Build : BuildType({
