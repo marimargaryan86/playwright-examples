@@ -85,5 +85,6 @@ object HttpsGithubComMarimargaryan86testTw94936git : GitVcsRoot({
     branch = "refs/heads/main"
     authMethod = password {
         userName = "marimargaryan86"
+        password = "credentialsJSON:7fd265fa-7da1-4c42-9258-9328946bf7e8"
     }
 })
