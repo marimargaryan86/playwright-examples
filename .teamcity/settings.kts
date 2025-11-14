@@ -38,6 +38,7 @@ project {
     buildType(Build)
     buildType(Brbr)
     buildType(Attatatat)
+    buildType(Dsdsdasdasda)
 }
 
 object Attatatat : BuildType({
@@ -105,6 +106,14 @@ object Build1 : BuildType({
     features {
         perfmon {
         }
+    }
+})
+
+object Dsdsdasdasda : BuildType({
+    name = "dsdsdasdasda"
+
+    vcs {
+        root(DslContext.settingsRoot)
     }
 })
 
