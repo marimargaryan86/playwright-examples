@@ -1,6 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
-import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
@@ -30,10 +29,10 @@ version = "2025.07"
 
 project {
 
-    vcsRoot(HttpsGithubComMarimargaryan86testTw94936git)
+    vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
 
     buildType(Build)
-    buildType(Ttttttt)
+    buildType(Build1)
 }
 
 object Build : BuildType({
@@ -54,28 +53,31 @@ object Build : BuildType({
     }
 })
 
-object Ttttttt : BuildType({
-    name = "ttttttt"
+object Build1 : BuildType({
+    name = "Build (1)"
 
     vcs {
-        root(HttpsGithubComMarimargaryan86testTw94936git)
+        root(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
     }
 
-    steps {
-        script {
-            name = "sleep"
-            id = "sleep"
-            scriptContent = "sleep 10"
+    triggers {
+        vcs {
+        }
+    }
+
+    features {
+        perfmon {
         }
     }
 })
 
-object HttpsGithubComMarimargaryan86testTw94936git : GitVcsRoot({
-    name = "https://github.com/marimargaryan86/test_TW-94936.git"
+object HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/test_TW-94936.git#refs/heads/main"
     url = "https://github.com/marimargaryan86/test_TW-94936.git"
     branch = "refs/heads/main"
+    branchSpec = "refs/heads/*"
     authMethod = password {
         userName = "marimargaryan86"
-        password = "credentialsJSON:7fd265fa-7da1-4c42-9258-9328946bf7e8"
+        password = "credentialsJSON:caff8745-cc20-4798-9a5b-89f1d1a82bd3"
     }
 })
