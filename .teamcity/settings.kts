@@ -31,7 +31,6 @@ version = "2025.07"
 project {
 
     vcsRoot(HttpsGithubComMarimargaryan86brbrGitRefsHeadsMain)
-    vcsRoot(HttpsGithubComMarimargaryan86brbrGit)
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936git)
 
@@ -99,15 +98,6 @@ object Build2 : BuildType({
     features {
         perfmon {
         }
-    }
-})
-
-object HttpsGithubComMarimargaryan86brbrGit : GitVcsRoot({
-    name = "https://github.com/marimargaryan86/brbr.git"
-    url = "https://github.com/marimargaryan86/brbr.git"
-    branch = "refs/heads/main"
-    authMethod = password {
-        userName = "marimargaryan86"
     }
 })
 
