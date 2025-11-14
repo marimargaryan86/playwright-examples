@@ -83,10 +83,6 @@ object Test : BuildType({
 object Testik : BuildType({
     name = "testik"
 
-    vcs {
-        root(HttpsGithubComMarimargaryan86testTw94936git)
-    }
-
     steps {
         script {
             name = "sleep"
