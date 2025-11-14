@@ -35,7 +35,16 @@ project {
 
     buildType(Build1)
     buildType(Build)
+    buildType(Brbr)
 }
+
+object Brbr : BuildType({
+    name = "brbr"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86brbrGit)
+    }
+})
 
 object Build : BuildType({
     name = "Build"
