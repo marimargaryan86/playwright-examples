@@ -55,6 +55,10 @@ object Build : BuildType({
 
 object Ttttttt : BuildType({
     name = "ttttttt"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86testTw94936git)
+    }
 })
 
 object HttpsGithubComMarimargaryan86testTw94936git : GitVcsRoot({
