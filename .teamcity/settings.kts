@@ -132,6 +132,7 @@ object HttpsGithubComMarimargaryan86parallelTestsGit : GitVcsRoot({
     branch = "refs/heads/main"
     authMethod = password {
         userName = "marimargaryan"
+        password = "credentialsJSON:7fd265fa-7da1-4c42-9258-9328946bf7e8"
     }
 })
 
