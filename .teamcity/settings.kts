@@ -31,6 +31,7 @@ version = "2025.07"
 project {
 
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936git)
+    vcsRoot(HttpsGithubComMarimargaryan86testTw94936git1)
 
     buildType(Build1)
     buildType(Test)
@@ -84,7 +85,7 @@ object Testik : BuildType({
     name = "testik"
 
     vcs {
-        root(HttpsGithubComMarimargaryan86testTw94936git)
+        root(HttpsGithubComMarimargaryan86testTw94936git1)
     }
 
     steps {
@@ -98,6 +99,16 @@ object Testik : BuildType({
 
 object HttpsGithubComMarimargaryan86testTw94936git : GitVcsRoot({
     name = "https://github.com/marimargaryan86/test_TW-94936.git"
+    url = "https://github.com/marimargaryan86/test_TW-94936.git"
+    branch = "refs/heads/main"
+    authMethod = password {
+        userName = "marimargaryan86"
+        password = "credentialsJSON:7fd265fa-7da1-4c42-9258-9328946bf7e8"
+    }
+})
+
+object HttpsGithubComMarimargaryan86testTw94936git1 : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/test_TW-94936.git (1)"
     url = "https://github.com/marimargaryan86/test_TW-94936.git"
     branch = "refs/heads/main"
     authMethod = password {
