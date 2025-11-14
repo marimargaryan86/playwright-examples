@@ -31,7 +31,7 @@ version = "2025.07"
 project {
 
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
-    description = "ddasdsad"
+    description = "ddasdsdfsdfsdfsdfsdsad"
 
     buildType(Build1)
     buildType(Build)
