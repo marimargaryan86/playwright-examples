@@ -86,6 +86,14 @@ object Testik : BuildType({
     vcs {
         root(HttpsGithubComMarimargaryan86testTw94936git)
     }
+
+    steps {
+        script {
+            name = "sleep"
+            id = "sleep"
+            scriptContent = "sleep 10"
+        }
+    }
 })
 
 object HttpsGithubComMarimargaryan86testTw94936git : GitVcsRoot({
