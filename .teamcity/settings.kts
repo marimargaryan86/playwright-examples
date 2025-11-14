@@ -30,11 +30,13 @@ version = "2025.07"
 
 project {
 
+    vcsRoot(HttpsGithubComMarimargaryan86brbrGitRefsHeadsMain)
     vcsRoot(HttpsGithubComMarimargaryan86brbrGit)
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
 
     buildType(Build1)
     buildType(Build)
+    buildType(Build2)
 }
 
 object Build : BuildType({
@@ -81,12 +83,41 @@ object Build1 : BuildType({
     }
 })
 
+object Build2 : BuildType({
+    name = "Build (2)"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86brbrGitRefsHeadsMain)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
 object HttpsGithubComMarimargaryan86brbrGit : GitVcsRoot({
     name = "https://github.com/marimargaryan86/brbr.git"
     url = "https://github.com/marimargaryan86/brbr.git"
     branch = "refs/heads/main"
     authMethod = password {
         userName = "marimargaryan86"
+    }
+})
+
+object HttpsGithubComMarimargaryan86brbrGitRefsHeadsMain : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/brbr.git#refs/heads/main"
+    url = "https://github.com/marimargaryan86/brbr.git"
+    branch = "refs/heads/main"
+    branchSpec = "refs/heads/*"
+    authMethod = password {
+        userName = "marimargaryan86"
+        password = "credentialsJSON:caff8745-cc20-4798-9a5b-89f1d1a82bd3"
     }
 })
 
