@@ -30,43 +30,12 @@ version = "2025.07"
 
 project {
 
-    vcsRoot(HttpsGithubComMarimargaryan86parallelTestsGit)
-    vcsRoot(HttpsGithubComMarimargaryan86feTestTaskGit)
-    vcsRoot(HttpsGithubComMarimargaryan86brbrGit)
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
+    vcsRoot(HttpsGithubComMarimargaryan86testTw94936git)
 
     buildType(Build1)
     buildType(Build)
-    buildType(Brbr)
-    buildType(Sfsdfd)
-    buildType(Sfsefs)
-    buildType(Attatatat)
-    buildType(Dsdsdasdasda)
 }
-
-object Attatatat : BuildType({
-    name = "attatatat"
-
-    vcs {
-        root(HttpsGithubComMarimargaryan86brbrGit)
-    }
-})
-
-object Brbr : BuildType({
-    name = "brbr"
-
-    vcs {
-        root(HttpsGithubComMarimargaryan86brbrGit)
-    }
-
-    steps {
-        script {
-            name = "sleep"
-            id = "sleep"
-            scriptContent = "sleep 10"
-        }
-    }
-})
 
 object Build : BuildType({
     name = "Build"
@@ -112,56 +81,12 @@ object Build1 : BuildType({
     }
 })
 
-object Dsdsdasdasda : BuildType({
-    name = "dsdsdasdasda"
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-})
-
-object Sfsdfd : BuildType({
-    name = "sfsdfd"
-
-    vcs {
-        root(HttpsGithubComMarimargaryan86parallelTestsGit)
-    }
-})
-
-object Sfsefs : BuildType({
-    name = "sfsefs"
-
-    vcs {
-        root(HttpsGithubComMarimargaryan86feTestTaskGit)
-    }
-})
-
-object HttpsGithubComMarimargaryan86brbrGit : GitVcsRoot({
-    name = "https://github.com/marimargaryan86/brbr.git"
-    url = "https://github.com/marimargaryan86/brbr.git"
-    branch = "refs/heads/main"
-    authMethod = password {
-        userName = "marimargaryan86"
-    }
-})
-
-object HttpsGithubComMarimargaryan86feTestTaskGit : GitVcsRoot({
-    name = "https://github.com/marimargaryan86/fe-test-task.git"
-    url = "https://github.com/marimargaryan86/fe-test-task.git"
-    branch = "refs/heads/main"
-    authMethod = password {
-        userName = "marimargaryan86"
-        password = "credentialsJSON:7fd265fa-7da1-4c42-9258-9328946bf7e8"
-    }
-})
-
-object HttpsGithubComMarimargaryan86parallelTestsGit : GitVcsRoot({
-    name = "https://github.com/marimargaryan86/parallel-tests.git"
-    url = "https://github.com/marimargaryan86/parallel-tests.git"
+object HttpsGithubComMarimargaryan86testTw94936git : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/test_TW-94936.git"
+    url = "https://github.com/marimargaryan86/test_TW-94936.git"
     branch = "refs/heads/main"
     authMethod = password {
         userName = "marimargaryan"
-        password = "credentialsJSON:7fd265fa-7da1-4c42-9258-9328946bf7e8"
     }
 })
 
