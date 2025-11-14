@@ -37,6 +37,7 @@ project {
     buildType(Build1)
     buildType(Build)
     buildType(Brbr)
+    buildType(Sfsdfd)
     buildType(Attatatat)
     buildType(Dsdsdasdasda)
 }
@@ -114,6 +115,14 @@ object Dsdsdasdasda : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+    }
+})
+
+object Sfsdfd : BuildType({
+    name = "sfsdfd"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86parallelTestsGit)
     }
 })
 
