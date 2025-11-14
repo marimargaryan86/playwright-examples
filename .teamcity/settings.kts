@@ -29,6 +29,7 @@ version = "2025.07"
 project {
 
     buildType(Build)
+    buildType(Ttttttt)
 }
 
 object Build : BuildType({
@@ -46,5 +47,13 @@ object Build : BuildType({
     features {
         perfmon {
         }
+    }
+})
+
+object Ttttttt : BuildType({
+    name = "ttttttt"
+
+    vcs {
+        root(DslContext.settingsRoot)
     }
 })
