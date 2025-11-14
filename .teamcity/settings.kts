@@ -30,6 +30,7 @@ version = "2025.07"
 
 project {
 
+    vcsRoot(HttpsGithubComMarimargaryan86parallelTestsGit)
     vcsRoot(HttpsGithubComMarimargaryan86brbrGit)
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
 
@@ -113,6 +114,15 @@ object HttpsGithubComMarimargaryan86brbrGit : GitVcsRoot({
     branch = "refs/heads/main"
     authMethod = password {
         userName = "marimargaryan86"
+    }
+})
+
+object HttpsGithubComMarimargaryan86parallelTestsGit : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/parallel-tests.git"
+    url = "https://github.com/marimargaryan86/parallel-tests.git"
+    branch = "refs/heads/main"
+    authMethod = password {
+        userName = "marimargaryan"
     }
 })
 
