@@ -31,6 +31,7 @@ version = "2025.07"
 project {
 
     vcsRoot(HttpsGithubComMarimargaryan86parallelTestsGit)
+    vcsRoot(HttpsGithubComMarimargaryan86feTestTaskGit)
     vcsRoot(HttpsGithubComMarimargaryan86brbrGit)
     vcsRoot(HttpsGithubComMarimargaryan86testTw94936gitRefsHeadsMain)
 
@@ -129,6 +130,15 @@ object Sfsdfd : BuildType({
 object HttpsGithubComMarimargaryan86brbrGit : GitVcsRoot({
     name = "https://github.com/marimargaryan86/brbr.git"
     url = "https://github.com/marimargaryan86/brbr.git"
+    branch = "refs/heads/main"
+    authMethod = password {
+        userName = "marimargaryan86"
+    }
+})
+
+object HttpsGithubComMarimargaryan86feTestTaskGit : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/fe-test-task.git"
+    url = "https://github.com/marimargaryan86/fe-test-task.git"
     branch = "refs/heads/main"
     authMethod = password {
         userName = "marimargaryan86"
