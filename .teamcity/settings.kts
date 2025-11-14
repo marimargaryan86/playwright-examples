@@ -66,7 +66,7 @@ object Build1 : BuildType({
         script {
             name = "sleep"
             id = "sleep"
-            scriptContent = "sleep 10"
+            scriptContent = "sleep 12"
         }
     }
 
