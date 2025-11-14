@@ -35,6 +35,7 @@ project {
     buildType(Build1)
     buildType(Test)
     buildType(Build)
+    buildType(Testik)
 }
 
 object Build : BuildType({
@@ -76,6 +77,14 @@ object Test : BuildType({
             id = "sleep"
             scriptContent = "sleep 10"
         }
+    }
+})
+
+object Testik : BuildType({
+    name = "testik"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86testTw94936git)
     }
 })
 
