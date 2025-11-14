@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -27,6 +28,8 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2025.07"
 
 project {
+
+    vcsRoot(HttpsGithubComMarimargaryan86testTw94936git)
 
     buildType(Build1)
     buildType(Build)
@@ -55,5 +58,14 @@ object Build1 : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+    }
+})
+
+object HttpsGithubComMarimargaryan86testTw94936git : GitVcsRoot({
+    name = "https://github.com/marimargaryan86/test_TW-94936.git"
+    url = "https://github.com/marimargaryan86/test_TW-94936.git"
+    branch = "refs/heads/main"
+    authMethod = password {
+        userName = "marimargaryan86"
     }
 })
