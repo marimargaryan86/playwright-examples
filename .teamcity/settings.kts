@@ -39,6 +39,7 @@ project {
     buildType(Build)
     buildType(Brbr)
     buildType(Sfsdfd)
+    buildType(Sfsefs)
     buildType(Attatatat)
     buildType(Dsdsdasdasda)
 }
@@ -124,6 +125,14 @@ object Sfsdfd : BuildType({
 
     vcs {
         root(HttpsGithubComMarimargaryan86parallelTestsGit)
+    }
+})
+
+object Sfsefs : BuildType({
+    name = "sfsefs"
+
+    vcs {
+        root(HttpsGithubComMarimargaryan86feTestTaskGit)
     }
 })
 
