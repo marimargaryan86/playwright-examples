@@ -35,24 +35,7 @@ project {
 
     buildType(Build1)
     buildType(Build)
-    buildType(Brbr)
 }
-
-object Brbr : BuildType({
-    name = "brbr"
-
-    vcs {
-        root(HttpsGithubComMarimargaryan86brbrGit)
-    }
-
-    steps {
-        script {
-            name = "sleep"
-            id = "sleep"
-            scriptContent = "sleep 10"
-        }
-    }
-})
 
 object Build : BuildType({
     name = "Build"
